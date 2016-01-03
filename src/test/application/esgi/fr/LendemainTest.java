@@ -48,8 +48,14 @@ public class LendemainTest {
 	}
 	
 	@Test
-	public void shouldReturnNextDayWithThirtyDaysMonth() {
+	public void shouldChangeMonthWithThirtyDaysMonth() {
 		String result = lendemain.calculeDateLendemain(30, 9, 2015);
 		Assert.assertEquals("1/10/2015", result);
+	}
+	
+	@Test
+	public void shouldReturnNextDayhWithThirtyDaysMonth() {
+		String result = lendemain.calculeDateLendemain(14, 9, 2015);
+		Assert.assertEquals("15/9/2015", result);
 	}
 }

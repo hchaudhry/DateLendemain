@@ -24,7 +24,7 @@ public class Lendemain {
 			return "Paramètre incorrecte";
 		
 		
-		if (mois == 4 || mois == 6 || mois == 9 || mois == 11 ) {
+		if ((jour == 30) && (mois == 4 || mois == 6 || mois == 9 || mois == 11) ) {
 			mois += 1;
 			jour = 1;
 		} else {
