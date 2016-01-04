@@ -27,6 +27,13 @@ public class Lendemain {
 		if ((jour == 30) && (mois == 4 || mois == 6 || mois == 9 || mois == 11) ) {
 			mois += 1;
 			jour = 1;
+		} else if(mois == 2 && jour == 28) {
+			if((annee % 400 == 0) || ((annee % 4 == 0) && (annee % 100 != 0))) {
+				jour += 1;
+			} else {
+				mois += 1;
+				jour = 1;	
+			}
 		} else {
 			jour += 1;
 			if (jour > 31) {

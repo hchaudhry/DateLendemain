@@ -58,4 +58,16 @@ public class LendemainTest {
 		String result = lendemain.calculeDateLendemain(14, 9, 2015);
 		Assert.assertEquals("15/9/2015", result);
 	}
+	
+	@Test
+	public void shouldReturnNextMonthWithNotLeapYear() {
+		String result = lendemain.calculeDateLendemain(28, 2, 2015);
+		Assert.assertEquals("1/3/2015", result);
+	}
+	
+	@Test
+	public void shoudlReturnNextMinthWithLeapYear() {
+		String result = lendemain.calculeDateLendemain(28, 2, 2016);
+		Assert.assertEquals("29/2/2016", result);
+	}
 }
